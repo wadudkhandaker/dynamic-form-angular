@@ -1,16 +1,16 @@
 import {
   ComponentFactoryResolver, ComponentRef, Directive, Input, OnInit,
   ViewContainerRef
-  } from "@angular/core";
-  import { FormGroup } from "@angular/forms";
-  import { FieldConfig } from "../../field.interface";
-  import { InputComponent } from "../input/input.component";
-  import { ButtonComponent } from "../button/button.component";
-  import { SelectComponent } from "../select/select.component";
-  import { DateComponent } from "../date/date.component";
-  import { RadiobuttonComponent } from "../radiobutton/radiobutton.component";
-  import { CheckboxComponent } from "../checkbox/checkbox.component";
-  import { FormGroupComponent } from "../form-group/form-group.component";
+} from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { FieldConfig } from "../../field.interface";
+import { InputComponent } from "../input/input.component";
+import { ButtonComponent } from "../button/button.component";
+import { SelectComponent } from "../select/select.component";
+import { DateComponent } from "../date/date.component";
+import { RadiobuttonComponent } from "../radiobutton/radiobutton.component";
+import { CheckboxComponent } from "../checkbox/checkbox.component";
+import { FormGroupComponent } from "../form-group/form-group.component";
 const componentMapper = {
     input: InputComponent,
     button: ButtonComponent,
@@ -29,11 +29,7 @@ const componentMapper = {
   @Input() group: FormGroup;
   constructor(private resolver: ComponentFactoryResolver, private container: ViewContainerRef) {}
   ngOnInit() {
-    debugger;
     const factory = this.resolver.resolveComponentFactory(componentMapper[this.field.type]);
-    // if(this.field.type ==='group'){
-    //   factory.inputs.push(this.field.fields);
-    // }
     this.componentRef = this.container.createComponent(factory);
     this.componentRef.instance.field = this.field;
     this.componentRef.instance.group = this.group;

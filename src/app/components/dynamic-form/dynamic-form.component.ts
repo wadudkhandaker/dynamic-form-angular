@@ -6,56 +6,61 @@ import { FieldConfig, Validator } from "../../field.interface";
   selector: 'dynamic-form',
   template: `
     <form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
-    <ng-container *ngFor="let field of fields;" dynamicField [field]="field" [group]="form">
-    </ng-container>
+      <div *ngFor="let row of formGroupConfig;">
+        <ng-container *ngFor="let field of row;" dynamicField [field]="field" [group]="form">
+        </ng-container>
+      </div>
     </form>
   `,
   styles: []
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() fields: FieldConfig[] = [];
+  @Input() formGroupConfig: any[][] = [];
   @Output() submit: EventEmitter<any> = new EventEmitter<any>();
   form: FormGroup;
   constructor(private fb: FormBuilder) { }
-  bindValidations(validations: any) {
-    if (validations.length > 0) {
-    const validList = [];
-    validations.forEach(valid => {
-    validList.push(valid.validator);
-    });
-    return Validators.compose(validList);
-    }
-    return null;
-  }
-  createControl() {
-    const group = this.fb.group({});
-    this.fields.forEach(field => {
-      if (field.type === "button") return;
-      const control = this.fb.control(field.value, this.bindValidations(field.validations || []));
-      group.addControl(field.name, control);
-    });
-    return group;
+  ngOnInit() {
+    this.form = this.fb.group(this.getFormGroup());
   }
 
-  ngOnInit() {
-    this.form = this.createControl();
+  getFormGroup():object{
+    let formGroupObj = new Object();
+    this.formGroupConfig.forEach((row:any[])=>{
+      row.forEach((column)=>{
+        console.log(column);
+        formGroupObj[column["name"]] = [{value:column["value"], disabled: column["disabled"]}, this.getValidations(column["validations"])];
+      });
+    });
+    return formGroupObj;
   }
-  get value() {
-    return this.form.value;
-  }
-  validateAllFormFields(formGroup: FormGroup) {
-    Object.keys(formGroup.controls).forEach(field => {
-    const control = formGroup.get(field);
-    control.markAsTouched({ onlySelf: true });
+
+  getValidations(fieldValidations:any[]){
+    let validations = [];
+    if(fieldValidations){
+      fieldValidations.forEach((validator : any)=>{
+        validations.push(validator.validator);
+      });
+    }
+    return validations;
+  };
+
+  validateAllFormControls():void{
+    let formControl;
+    Object.keys(this.form.controls).forEach((controlName : string)=>{
+      formControl = this.form.get(controlName);
+      formControl.markAsDirty();
+      formControl.markAsTouched();
     });
   }
+
+
   onSubmit(event: Event) {
     event.preventDefault();
     event.stopPropagation();
     if (this.form.valid) {
     this.submit.emit(this.form.value);
     } else {
-    this.validateAllFormFields(this.form);
+    this.validateAllFormControls();
     }
   }
 }
