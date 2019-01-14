@@ -5,10 +5,12 @@ import { FieldConfig, Validator } from "../../field.interface";
 @Component({
   selector: 'dynamic-form',
   template: `
-    <form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)">
-      <div *ngFor="let row of formGroupConfig;">
-        <ng-container *ngFor="let field of row;" dynamicField [field]="field" [group]="form">
-        </ng-container>
+    <form class="dynamic-form" [formGroup]="form" (submit)="onSubmit($event)" fxLayout="column">
+      <div *ngFor="let row of formGroupConfig;" fxFlex="100" fxLayout="row" fxLayoutGap="20px">
+        <div *ngFor="let field of row;" [fxFlex]="field.fieldWidth">
+          <ng-container  dynamicField [field]="field" [group]="form">
+          </ng-container>
+        </div>
       </div>
     </form>
   `,
