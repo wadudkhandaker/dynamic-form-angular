@@ -10,6 +10,8 @@ import { SelectComponent } from "../select/select.component";
 import { DateComponent } from "../date/date.component";
 import { RadiobuttonComponent } from "../radiobutton/radiobutton.component";
 import { CheckboxComponent } from "../checkbox/checkbox.component";
+import { SlideToggleComponent } from "../slide-toggle/slide-toggle.component";
+import { SliderComponent } from "../slider/slider.component";
 import { FormGroupComponent } from "../form-group/form-group.component";
 const componentMapper = {
     input: InputComponent,
@@ -18,7 +20,9 @@ const componentMapper = {
     date: DateComponent,
     radiobutton: RadiobuttonComponent,
     checkbox: CheckboxComponent,
-    group: FormGroupComponent
+    group: FormGroupComponent,
+    "slide-toggle" : SlideToggleComponent,
+    slider : SliderComponent
 };
 @Directive({
   selector: '[dynamicField]'

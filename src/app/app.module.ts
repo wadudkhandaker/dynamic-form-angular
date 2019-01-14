@@ -10,6 +10,8 @@ import { SelectComponent } from './components/select/select.component';
 import { DateComponent } from './components/date/date.component';
 import { RadiobuttonComponent } from './components/radiobutton/radiobutton.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
+import { SliderComponent } from './components/slider/slider.component';
 import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.directive';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -23,9 +25,11 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     DateComponent,
     RadiobuttonComponent,
     CheckboxComponent,
+    SlideToggleComponent,
     DynamicFieldDirective,
     DynamicFormComponent,
-    FormGroupComponent
+    FormGroupComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     SelectComponent,
     DateComponent,
     RadiobuttonComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    SlideToggleComponent,
+    SliderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

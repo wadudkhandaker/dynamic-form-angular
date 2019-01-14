@@ -98,6 +98,21 @@ export class AppComponent {
           name: "term",
           value: true,
           fieldWidth:"50"
+        },{
+          type: "slide-toggle",
+          label: "Slide Me",
+          name: "Accept Email",
+          value : true,
+          fieldWidth : "50"
+        }],
+        [{
+          type:"slider",
+          label : "Max Price",
+          name : "maxPrice",
+          value : 50,
+          fieldWidth : "50",
+          min : 0,
+          max : 100
         }],
        [{
         type: "button",
