@@ -113,6 +113,12 @@ export class AppComponent {
           fieldWidth : "50",
           min : 0,
           max : 100
+        },{
+          type : "menu",
+          label : "My menu",
+          name : "myMenu",
+          value : "Item1",
+          options : ["Item1", "Item2"]
         }],
        [{
         type: "button",

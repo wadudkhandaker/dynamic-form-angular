@@ -12,7 +12,9 @@ import { RadiobuttonComponent } from "../radiobutton/radiobutton.component";
 import { CheckboxComponent } from "../checkbox/checkbox.component";
 import { SlideToggleComponent } from "../slide-toggle/slide-toggle.component";
 import { SliderComponent } from "../slider/slider.component";
+import { MenuComponent } from "../menu/menu.component";
 import { FormGroupComponent } from "../form-group/form-group.component";
+
 const componentMapper = {
     input: InputComponent,
     button: ButtonComponent,
@@ -22,7 +24,8 @@ const componentMapper = {
     checkbox: CheckboxComponent,
     group: FormGroupComponent,
     "slide-toggle" : SlideToggleComponent,
-    slider : SliderComponent
+    slider : SliderComponent,
+    menu : MenuComponent
 };
 @Directive({
   selector: '[dynamicField]'

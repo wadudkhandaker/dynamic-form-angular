@@ -29,7 +29,6 @@ export class DynamicFormComponent implements OnInit {
     let formGroupObj = new Object();
     this.formGroupConfig.forEach((row:any[])=>{
       row.forEach((column)=>{
-        console.log(column);
         formGroupObj[column["name"]] = [{value:column["value"], disabled: column["disabled"]}, this.getValidations(column["validations"])];
       });
     });

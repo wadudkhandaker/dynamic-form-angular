@@ -12,6 +12,7 @@ import { RadiobuttonComponent } from './components/radiobutton/radiobutton.compo
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { SlideToggleComponent } from './components/slide-toggle/slide-toggle.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.directive';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -29,7 +30,8 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     DynamicFieldDirective,
     DynamicFormComponent,
     FormGroupComponent,
-    SliderComponent
+    SliderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     RadiobuttonComponent,
     CheckboxComponent,
     SlideToggleComponent,
-    SliderComponent
+    SliderComponent,
+    MenuComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@
   <dynamic-form [formGroupConfig]="formConfig" (submit)="submit($event)">
   </dynamic-form>
   <div class="margin-top">
-  {{ form.value | json }}
+  {{ formGroupConfig | json }}
   </div>
 </div>
 
