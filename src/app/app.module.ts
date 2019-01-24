@@ -19,6 +19,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { FormGroupComponent } from './components/form-group/form-group.component';
 import { AccordianComponent } from './components/accordian/accordian.component';
 import { GridComponent } from './components/grid/grid.component';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GridComponent } from './components/grid/grid.component';
     SliderComponent,
     MenuComponent,
     AccordianComponent,
-    GridComponent
+    GridComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { GridComponent } from './components/grid/grid.component';
     SliderComponent,
     MenuComponent,
     AccordianComponent,
-    GridComponent
+    GridComponent,
+    StepperComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

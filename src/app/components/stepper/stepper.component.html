@@ -1,0 +1,26 @@
+<div class="demo-full-width margin-top" [formGroup]="group" >
+	<mat-horizontal-stepper *ngIf="!field.category || (field.category && field.category === 'horizontal')" [linear]="field.isLinear" #stepper>
+		<mat-step *ngFor="let step of field.steps;" [label]="step.label" >
+			<dynamic-form [formGroupConfig]="step.formConfig" (submit)="submit($event)"></dynamic-form>
+			<div>
+		        <button mat-button matStepperPrevious>Prev</button>
+		    </div>
+			<div>
+		        <button mat-button matStepperNext>Next</button>
+		    </div>
+		</mat-step>
+		
+	</mat-horizontal-stepper>
+	<mat-vertical-stepper *ngIf="field.category && field.category === 'vertical'" [linear]="field.isLinear" #stepper>
+		<mat-step *ngFor="let step of field.steps;" [label]="step.label">
+			<dynamic-form [formGroupConfig]="step.formConfig" (submit)="submit($event)"></dynamic-form>
+			<div>
+		        <button mat-button matStepperPrevious>Prev</button>
+		    </div>
+			<div>
+		        <button mat-button matStepperNext>Next</button>
+		    </div>
+		</mat-step>
+		
+	</mat-vertical-stepper>
+</div>
