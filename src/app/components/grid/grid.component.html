@@ -1,0 +1,7 @@
+<div class="demo-full-width margin-top" [formGroup]="group" >
+	<mat-grid-list [cols]="field.columns" [rowHeight]="field.rowHeight">
+		<mat-grid-tile *ngFor="let tile of field.tiles;">
+			<dynamic-form [formGroupConfig]="tile.formConfig" (submit)="submit($event)"></dynamic-form>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>

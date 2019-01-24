@@ -18,6 +18,7 @@ import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.com
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { FormGroupComponent } from './components/form-group/form-group.component';
 import { AccordianComponent } from './components/accordian/accordian.component';
+import { GridComponent } from './components/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AccordianComponent } from './components/accordian/accordian.component';
     FormGroupComponent,
     SliderComponent,
     MenuComponent,
-    AccordianComponent
+    AccordianComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { AccordianComponent } from './components/accordian/accordian.component';
     SlideToggleComponent,
     SliderComponent,
     MenuComponent,
-    AccordianComponent
+    AccordianComponent,
+    GridComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

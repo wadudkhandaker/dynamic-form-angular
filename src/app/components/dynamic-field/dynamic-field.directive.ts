@@ -15,6 +15,7 @@ import { SliderComponent } from "../slider/slider.component";
 import { MenuComponent } from "../menu/menu.component";
 import { FormGroupComponent } from "../form-group/form-group.component";
 import { AccordianComponent } from "../accordian/accordian.component";
+import { GridComponent } from "../grid/grid.component";
 
 const componentMapper = {
     "input": InputComponent,
@@ -27,7 +28,8 @@ const componentMapper = {
     "slide-toggle" : SlideToggleComponent,
     "slider" : SliderComponent,
     "menu" : MenuComponent,
-    "accordion" : AccordianComponent
+    "accordion" : AccordianComponent,
+    "grid" : GridComponent
 };
 @Directive({
   selector: '[dynamicField]'

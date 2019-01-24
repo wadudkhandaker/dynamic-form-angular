@@ -180,6 +180,37 @@ export class AppComponent {
             ]
           }]
         }],
+        [{
+          type : "grid",
+          columns : 1,
+          rowHeight : "1:2",
+          tiles : [{
+            formConfig : [
+              [{
+                  type: "date",
+                  label: "DOB",
+                  name: "dob",
+                  validations: [
+                    {
+                      name: "required",
+                      validator: Validators.required,
+                      message: "Date of Birth Required"
+                    }
+                  ],
+                  fieldWidth:"50"
+                },
+                {
+                  type: "select",
+                  label: "Country",
+                  name: "country",
+                  value: "UK",
+                  options: ["India", "UAE", "UK", "US"],
+                  fieldWidth:"50"
+               }]
+            ]
+
+          }]
+        }],
        [{
         type: "button",
         label: "Save"
