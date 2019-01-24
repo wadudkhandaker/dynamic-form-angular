@@ -20,6 +20,7 @@ import { FormGroupComponent } from './components/form-group/form-group.component
 import { AccordianComponent } from './components/accordian/accordian.component';
 import { GridComponent } from './components/grid/grid.component';
 import { StepperComponent } from './components/stepper/stepper.component';
+import { TabComponent } from './components/tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { StepperComponent } from './components/stepper/stepper.component';
     MenuComponent,
     AccordianComponent,
     GridComponent,
-    StepperComponent
+    StepperComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,8 @@ import { StepperComponent } from './components/stepper/stepper.component';
     MenuComponent,
     AccordianComponent,
     GridComponent,
-    StepperComponent
+    StepperComponent,
+    TabComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

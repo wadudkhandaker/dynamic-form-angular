@@ -1,0 +1,7 @@
+<div class="demo-full-width margin-top" [formGroup]="group" >
+	<mat-tab-group>
+		<mat-tab *ngFor="let tab of field.tabs" [label]="tab.label">
+			<dynamic-form [formGroupConfig]="tab.formConfig" (submit)="submit($event)"></dynamic-form>
+		</mat-tab>
+	</mat-tab-group>
+</div>

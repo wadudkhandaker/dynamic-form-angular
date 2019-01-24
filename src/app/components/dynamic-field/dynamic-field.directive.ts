@@ -17,6 +17,7 @@ import { FormGroupComponent } from "../form-group/form-group.component";
 import { AccordianComponent } from "../accordian/accordian.component";
 import { GridComponent } from "../grid/grid.component";
 import { StepperComponent } from "../stepper/stepper.component";
+import { TabComponent } from "../tab/tab.component";
 
 const componentMapper = {
     "input": InputComponent,
@@ -31,7 +32,8 @@ const componentMapper = {
     "menu" : MenuComponent,
     "accordion" : AccordianComponent,
     "grid" : GridComponent,
-    "stepper" : StepperComponent
+    "stepper" : StepperComponent,
+    "tab" : TabComponent
 };
 @Directive({
   selector: '[dynamicField]'
