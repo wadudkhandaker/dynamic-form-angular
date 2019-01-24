@@ -1,0 +1,16 @@
+<div class="demo-full-width margin-top" [formGroup]="group" >
+	<mat-accordion>
+		<mat-expansion-panel *ngFor="let panel of field.panels">
+			<mat-expansion-panel-header *ngIf="panel.header">
+				<mat-panel-title *ngIf="panel?.header?.title">
+					{{panel.header.title}}
+				</mat-panel-title>
+				<mat-panel-description *ngIf="panel?.header?.description">
+					{{panel.header.description}}
+				</mat-panel-description>
+				
+			</mat-expansion-panel-header>
+			<dynamic-form [formGroupConfig]="panel.formConfig" (submit)="submit($event)"></dynamic-form>
+		</mat-expansion-panel>
+	</mat-accordion>
+</div>

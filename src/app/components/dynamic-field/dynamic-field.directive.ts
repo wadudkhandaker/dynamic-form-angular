@@ -14,18 +14,20 @@ import { SlideToggleComponent } from "../slide-toggle/slide-toggle.component";
 import { SliderComponent } from "../slider/slider.component";
 import { MenuComponent } from "../menu/menu.component";
 import { FormGroupComponent } from "../form-group/form-group.component";
+import { AccordianComponent } from "../accordian/accordian.component";
 
 const componentMapper = {
-    input: InputComponent,
-    button: ButtonComponent,
-    select: SelectComponent,
-    date: DateComponent,
-    radiobutton: RadiobuttonComponent,
-    checkbox: CheckboxComponent,
-    group: FormGroupComponent,
+    "input": InputComponent,
+    "button": ButtonComponent,
+    "select": SelectComponent,
+    "date": DateComponent,
+    "radiobutton": RadiobuttonComponent,
+    "checkbox": CheckboxComponent,
+    "group": FormGroupComponent,
     "slide-toggle" : SlideToggleComponent,
-    slider : SliderComponent,
-    menu : MenuComponent
+    "slider" : SliderComponent,
+    "menu" : MenuComponent,
+    "accordion" : AccordianComponent
 };
 @Directive({
   selector: '[dynamicField]'

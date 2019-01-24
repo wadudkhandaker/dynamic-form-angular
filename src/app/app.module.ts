@@ -17,6 +17,8 @@ import { DynamicFieldDirective } from './components/dynamic-field/dynamic-field.
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { FormGroupComponent } from './components/form-group/form-group.component';
+import { AccordianComponent } from './components/accordian/accordian.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     DynamicFormComponent,
     FormGroupComponent,
     SliderComponent,
-    MenuComponent
+    MenuComponent,
+    AccordianComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { FormGroupComponent } from './components/form-group/form-group.component
     CheckboxComponent,
     SlideToggleComponent,
     SliderComponent,
-    MenuComponent
+    MenuComponent,
+    AccordianComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
